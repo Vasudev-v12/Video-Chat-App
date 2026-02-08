@@ -5,8 +5,8 @@ const express = require('express');
 const app = express();
 
 const options = {
-  cert: fs.readFileSync('192.168.1.5.pem'),
-  key: fs.readFileSync('192.168.1.5-key.pem')
+  cert: fs.readFileSync('cert name'),
+  key: fs.readFileSync('cert key')
 };
 
 app.use(express.static('public'));

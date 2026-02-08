@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Group Call</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="main">
+            <div id="options">
+                <input type="text" id="username" placeholder="Enter your name" required />
+                <button id="create" onclick="createMeet()">Create meeting</button>
+                <h1>OR</h1>
+                <input id="roomID" type="text" placeholder="Enter room ID">
+                <button id="join" onclick="join()">Join</button>
+            </div>
+        </div>
+        <script src="https://download.agora.io/sdk/release/AgoraRTC_N.js"></script>
+        <script src="https://download.agora.io/sdk/release/AgoraRTM.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

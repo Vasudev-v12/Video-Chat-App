@@ -1,0 +1,16 @@
+const https = require('https');
+const fs = require('fs');
+const express = require('express');
+
+const app = express();
+
+const options = {
+  cert: fs.readFileSync('192.168.1.5.pem'),
+  key: fs.readFileSync('192.168.1.5-key.pem')
+};
+
+app.use(express.static('public'));
+
+https.createServer(options, app).listen(3000, () => {
+  console.log('HTTPS server running on https://localhost:3000');
+});
